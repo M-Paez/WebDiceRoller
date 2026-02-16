@@ -1,1 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yahtzee Dice Roller</title>
+    <link rel="stylesheet" href="index.css">
+</head>
 
+<body onload="rollDice()">
+
+<div id="DiceContainer">
+    <h1>Yahtzee Dice Roller</h1>
+
+    <p class="description">
+        This is a Yahtzee rolling dice simulator. There are five 6-sided dice for you to roll. When you press the "Roll The Dice" button it will roll all five again.
+    </p>
+
+    <div class="DiceResults">
+        <div class="die">
+            <label>Die 1</label>
+            <input type="text" id="die1" readonly>
+            <img id="img1">
+        </div>
+        <div class="die">
+            <label>Die 2</label>
+            <input type="text" id="die2" readonly>
+            <img id="img2">
+        </div> 
+        <div class="die">
+            <label>Die 3</label>
+            <input type="text" id="die3" readonly>
+            <img id="img3">
+        </div>
+        <div class="die">
+            <label>Die 4</label>
+            <input type="text" id="die4" readonly>
+            <img id="img4">
+        </div>
+        <div class="die">
+            <label>Die 5</label>
+            <input type="text" id="die5" readonly>
+            <img id="img5">
+        </div>   
+    </div>
+
+    <button id="RollButton" onclick="rollDice()" autofocus>
+        Roll the Dice!!
+    </button>
+
+
+</div>
+
+<script src="index.js"></script>
+
+</body>
+</html>
