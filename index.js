@@ -1,5 +1,5 @@
 // This is needed to know where to go
-const apiBaseUrl = "https://gray-bush-02b9c4a10.2.azurestaticapps.net";
+const apiBaseUrl = "https://gray-bush-02b9c4a10.2.azurewebsites.net";
 
 // "Waking up" The server is being awoken
 async function WakeUpServer() {
@@ -18,6 +18,7 @@ window.addEventListener("load", WakeUpServer);
 async function rollSingleDie() {
     try {
         const response = await fetch(`${apiBaseUrl}/roll?dice=1d6`);
+        if (!response.ok) throw new Error("Oops there's something wrong");
         const data = await response.json();
         return data.result;
     } catch (error) {
@@ -33,6 +34,7 @@ async function rollMultipleDice() {
         if (roll !== null) {
             document.getElementById("die" + i).value = roll;
             document.getElementById("img" + i).src = "DiceImages/" + roll + ".png";
+            document.getElementById("img" + i).alt = "Dice showing " + roll;
         } else {
             document.getElementById("die" + i).value = "Error";
         }
