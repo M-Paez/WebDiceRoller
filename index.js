@@ -1,5 +1,5 @@
 // This is needed to know where to go
-const apiBaseUrl = "https://gray-bush-02b9c4a10.2.azurewebsites.net";
+const apiBaseUrl = "webdicerollserver-cph2aaeqg3c0grge.centralus-01.azurewebsites.net";
 
 // "Waking up" The server is being awoken
 async function WakeUpServer() {
